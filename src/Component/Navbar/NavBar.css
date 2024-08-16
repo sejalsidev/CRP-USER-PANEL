@@ -1,0 +1,39 @@
+.navbar-custom {
+    background-color: #165a72 !important;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    color: #fff !important
+}
+
+body {
+    margin: 0;
+    font-size: 24px;
+}
+
+.app {
+    color: #165a72;
+}
+
+h1 {
+    color: #165a72;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.menu1 {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #165a72;
+}
