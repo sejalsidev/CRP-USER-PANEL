@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
 
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-custom ">
+            <nav className="navbar navbar-expand-lg border navbar-custom ">
                 <div className="container">
                     <Link className="navbar-brand" to="/home">
                         <img src={require('../../images/crp-group-removebg-preview.png')} style={{ width: "100px", height: "50px" }} />
@@ -68,7 +68,7 @@ const Navbar = () => {
                                     src={require('../../images/avtar-prifile-image.png')}
                                     alt="profile"
                                     className="profile-image rounded-circle"
-                                    style={{ width: "50px", height: "50px" }}
+                                    style={{ width: "40px", height: "40px" }}
                                 />
                             </Dropdown.Toggle>
                             <Dropdown.Menu>

@@ -37,3 +37,7 @@ h1 {
 h2 {
     color: #165a72;
 }
+.bg-body-tertiary
+{
+    color: #165a72 !important;
+}

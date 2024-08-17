@@ -69,12 +69,12 @@ const Home = () => {
                     <MenuItem component={<NavLink to="/workdetails" />} icon={<CallIcon />}>
                         Work Allocate
                     </MenuItem>
-                    <MenuItem icon={<MonetizationOnRoundedIcon />}>Transactions</MenuItem>
-                    <SubMenu icon={<PermDataSettingIcon />} label="Settings">
+                    <MenuItem component={<NavLink to="/activitydetails" />} icon={<MonetizationOnRoundedIcon />}>Activity Section</MenuItem>
+                    {/* <SubMenu icon={<PermDataSettingIcon />} label="Settings">
                         <MenuItem>Account</MenuItem>
                         <MenuItem>Privacy</MenuItem>
                         <MenuItem>Notifications</MenuItem>
-                    </SubMenu>
+                    </SubMenu> */}
                     <MenuItem icon={<LogoutRoundedIcon />}>Logout</MenuItem>
                 </Menu>
             </Sidebar>

@@ -7,6 +7,7 @@ import Login from './Pages/Login';
 import ProfileDetail from './Pages/ProfileDetail';
 import FeedBackPage from './Pages/FeedBackPage';
 import WorkAllocatePage from './Pages/WorkAllocatePage';
+import ActivitysectionPage from './Pages/ActivitysectionPage';
 
 
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/profiledetails" element={<ProfileDetail />} />
               <Route path="/feedbackdetails" element={<FeedBackPage />} />
               <Route path="/workdetails" element={<WorkAllocatePage />} />
+              <Route path="/activitydetails" element={<ActivitysectionPage />} />
             </Route>
           </Routes>
         </ProSidebarProvider >
