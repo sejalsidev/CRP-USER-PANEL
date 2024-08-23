@@ -13,6 +13,7 @@ const Navbar = () => {
 
     const handleProfile = () => {
         handleShow(true)
+        
     }
 
     const handleLogout = () => {

@@ -8,6 +8,8 @@ import ProfileDetail from './Pages/ProfileDetail';
 import FeedBackPage from './Pages/FeedBackPage';
 import WorkAllocatePage from './Pages/WorkAllocatePage';
 import ActivitysectionPage from './Pages/ActivitysectionPage';
+import RequestsectionPage from './Pages/RequestsectionPage';
+import LeavechartPage from './Pages/LeavechartPage';
 
 
 
@@ -27,6 +29,8 @@ function App() {
               <Route path="/feedbackdetails" element={<FeedBackPage />} />
               <Route path="/workdetails" element={<WorkAllocatePage />} />
               <Route path="/activitydetails" element={<ActivitysectionPage />} />
+              <Route path="/requestdetails" element={<RequestsectionPage />} />
+              <Route path="/leavedetails" element={<LeavechartPage />} />
             </Route>
           </Routes>
         </ProSidebarProvider >

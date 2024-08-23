@@ -45,7 +45,7 @@ const ProfileData = ({ show, handleShow, handleClose, editProfile, updateProfile
     const onsubmit = async (values) => {
         console.log(values, "valuesvaluesvaluesvaluesvalues");
         try {
-            console.log(updateProfile._id, "updateidupdateidupdateidupdateidupdateidupdateid")
+            console.log(updateProfile?._id, "updateidupdateidupdateidupdateidupdateidupdateid")
             if (editProfile) {
                 console.log(editProfile)
                 const id = await updateProfile.EmployeeData[0]?._id

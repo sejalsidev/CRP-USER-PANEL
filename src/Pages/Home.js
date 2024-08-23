@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
     Sidebar,
     Menu,
@@ -14,18 +14,24 @@ import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import PermDataSettingIcon from "@mui/icons-material/PermDataSetting";
 import BarChartRoundedIcon from "@mui/icons-material/BarChartRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+import { FcLeave } from "react-icons/fc";
 import CallIcon from "@mui/icons-material/Call";
 import Navbar from "../Component/Navbar/Navbar";
 
 const Home = () => {
     const { collapseSidebar, collapsed } = useProSidebar();
     const [isCollapsed, setIsCollapsed] = useState(collapsed);
+    const navigate = useNavigate()
 
     const toggleSidebar = () => {
         setIsCollapsed(!isCollapsed);
         collapseSidebar();
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+        navigate('/Login')
+    }
     return (
         <div style={{ display: "flex", height: "100vh" }}>
             <Sidebar
@@ -75,7 +81,13 @@ const Home = () => {
                         <MenuItem>Privacy</MenuItem>
                         <MenuItem>Notifications</MenuItem>
                     </SubMenu> */}
-                    <MenuItem icon={<LogoutRoundedIcon />}>Logout</MenuItem>
+                    <MenuItem component={<NavLink to="/requestdetails" />} icon={<CallIcon />}>
+                        Request Section
+                    </MenuItem>
+                    <MenuItem component={<NavLink to="/leavedetails" />} icon={<FcLeave />}>
+                        Leave Application
+                    </MenuItem>
+                    <MenuItem icon={<LogoutRoundedIcon />} onClick={handleLogout}>Logout</MenuItem>
                 </Menu>
             </Sidebar>
             <div style={{

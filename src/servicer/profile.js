@@ -28,6 +28,7 @@ export const profileData = async (values) => {
     formData.append('currentOffice', values.currentOffice);
     formData.append('officeType', values.officeType);
     formData.append('image', values.image);
+    console.log(values)
     try {
         const response = await axios.post("http://localhost:2000/employee/add",
             formData
@@ -36,12 +37,13 @@ export const profileData = async (values) => {
         console.log(response.data)
         return response.data
     } catch (error) {
-        console.log("Error Fetching Data", error)
+        console.log("Error Fetching Data",  )
     }
 }
 
 export const updateProfileData = async (values, id) => {
     console.log(values, "updateupdateupdateupdateupdateupdateupdateupdate")
+    console.log(id, "ffffff")
     const formData = new FormData()
     formData.append('firstName', values.firstName)
     formData.append('middleName', values.middleName);
