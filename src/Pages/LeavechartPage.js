@@ -35,14 +35,30 @@ const LeavechartPage = () => {
         if (leaveData.length > 0) {
             const options = {
                 chart: {
-                    type: 'bar',
                     height: 500,
                     width: '100%',
+                    type: 'line',
                 },
-                series: [{
-                    name: 'Leave Count',
-                    data: leaveData,
-                }],
+                series: [
+                    {
+                        name: 'Leave Count',
+                        type: 'line',
+                        data: leaveData,
+                    },
+                    {
+                        name: 'Cumulative Leave Count',
+                        type: 'line',
+                        data: leaveData.reduce((acc, val) => {
+                            // Calculate cumulative data
+                            if (acc.length === 0) {
+                                acc.push(val);
+                            } else {
+                                acc.push(acc[acc.length - 1] + val);
+                            }
+                            return acc;
+                        }, [])
+                    }
+                ],
                 xaxis: {
                     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
                 },

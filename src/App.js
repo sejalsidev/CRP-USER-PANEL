@@ -10,6 +10,7 @@ import WorkAllocatePage from './Pages/WorkAllocatePage';
 import ActivitysectionPage from './Pages/ActivitysectionPage';
 import RequestsectionPage from './Pages/RequestsectionPage';
 import LeavechartPage from './Pages/LeavechartPage';
+import AttendancePage from './Pages/AttendancePage';
 
 
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/activitydetails" element={<ActivitysectionPage />} />
               <Route path="/requestdetails" element={<RequestsectionPage />} />
               <Route path="/leavedetails" element={<LeavechartPage />} />
+              <Route path="/attendancedetails" element={<AttendancePage />} />
             </Route>
           </Routes>
         </ProSidebarProvider >

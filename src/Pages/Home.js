@@ -87,6 +87,9 @@ const Home = () => {
                     <MenuItem component={<NavLink to="/leavedetails" />} icon={<FcLeave />}>
                         Leave Application
                     </MenuItem>
+                    <MenuItem component={<NavLink to="/attendancedetails" />} icon={<FcLeave />}>
+                        Attendance Sheets
+                    </MenuItem>
                     <MenuItem icon={<LogoutRoundedIcon />} onClick={handleLogout}>Logout</MenuItem>
                 </Menu>
             </Sidebar>
